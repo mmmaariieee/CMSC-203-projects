@@ -1,1 +1,1 @@
-# CMSC203
+# CMSC203 Projects
