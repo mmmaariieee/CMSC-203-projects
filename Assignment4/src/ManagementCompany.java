@@ -1,3 +1,17 @@
+/*
+ * Class: CMSC203 
+ * Instructor: Ashique Tanveer
+ * Description: This code represents a property management application
+ * that allows users to manage properties and a management company.
+ * Due: 07/17/2023
+ * Platform/compiler: Eclipse
+ * I pledge that I have completed the programming 
+ * assignment independently. I have not copied the code 
+ * from a student or any source. I have not given my code 
+ * to any student.
+   Print your Name here: Mariia Honcharenko
+*/
+
 public class ManagementCompany {
     private String name;
     private String taxID;
@@ -10,6 +24,7 @@ public class ManagementCompany {
     public static final int MGMT_WIDTH = 10;
     public static final int MGMT_DEPTH = 10;
 
+    // Default constructor
     public ManagementCompany() {
         this.name = "";
         this.taxID = "";
@@ -19,6 +34,7 @@ public class ManagementCompany {
         this.numberOfProperties = 0;
     }
 
+    // Parameterized constructor
     public ManagementCompany(String name, String taxID, double mgmFeePer) {
         this.name = name;
         this.taxID = taxID;
@@ -28,6 +44,7 @@ public class ManagementCompany {
         this.numberOfProperties = 0;
     }
 
+    // Parameterized constructor with plot dimensions
     public ManagementCompany(String name, String taxID, double mgmFeePer, int x, int y, int width, int depth) {
         this.name = name;
         this.taxID = taxID;
@@ -37,6 +54,7 @@ public class ManagementCompany {
         this.numberOfProperties = 0;
     }
 
+    // Copy constructor
     public ManagementCompany(ManagementCompany otherCompany) {
         this.name = otherCompany.name;
         this.taxID = otherCompany.taxID;
@@ -49,14 +67,17 @@ public class ManagementCompany {
         this.numberOfProperties = otherCompany.numberOfProperties;
     }
 
+    // Method to add a property using name, city, rent, and owner
     public int addProperty(String name, String city, double rent, String owner) {
         return addProperty(new Property(name, city, rent, owner));
     }
 
+    // Method to add a property using name, city, rent, owner, and plot dimensions
     public int addProperty(String name, String city, double rent, String owner, int x, int y, int width, int depth) {
         return addProperty(new Property(name, city, rent, owner, x, y, width, depth));
     }
 
+    // Method to add a Property object to the properties array
     public int addProperty(Property property) {
         if (numberOfProperties >= MAX_PROPERTY) {
             return -1; // Array is full
@@ -81,6 +102,7 @@ public class ManagementCompany {
         return numberOfProperties - 1; // Return the index of the array where the property was added
     }
 
+    // Method to remove the last property from the properties array
     public void removeLastProperty() {
         if (numberOfProperties > 0) {
             properties[numberOfProperties - 1] = null;
@@ -88,14 +110,17 @@ public class ManagementCompany {
         }
     }
 
+    // Method to check if the properties array is full
     public boolean isPropertiesFull() {
         return numberOfProperties >= MAX_PROPERTY;
     }
 
+    // Method to get the count of properties
     public int getPropertiesCount() {
         return numberOfProperties;
     }
 
+    // Method to calculate and return the total rent of all properties
     public double getTotalRent() {
         double totalRent = 0.0;
         for (int i = 0; i < numberOfProperties; i++) {
@@ -104,6 +129,7 @@ public class ManagementCompany {
         return totalRent;
     }
 
+    // Method to get the property with the highest rent
     public Property getHighestRentProperty() {
         if (numberOfProperties > 0) {
             Property highestRentProperty = properties[0];
@@ -117,33 +143,40 @@ public class ManagementCompany {
         return null;
     }
 
+    // Method to check if the management fee percentage is valid
     public boolean isManagementFeeValid() {
         return mgmFeePer >= 0 && mgmFeePer <= 100;
     }
 
+    // Getter method for the name
     public String getName() {
         return name;
     }
 
+    // Getter method for the tax ID
     public String getTaxID() {
         return taxID;
     }
 
+    // Getter method for the properties array
     public Property[] getProperties() {
         return properties;
     }
 
+    // Getter method for the management fee percentage
     public double getMgmFeePer() {
         return mgmFeePer;
     }
 
+    // Getter method for the plot
     public Plot getPlot() {
         return plot;
     }
 
+    // Override the toString method to provide a string representation of the management company
     @Override
     public String toString() {
-    	StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         if (numberOfProperties == 0) {
             sb.append("12,12,6,6");
         } else {
