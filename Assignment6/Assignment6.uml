@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_DLA4EDo_Ee6ev_AfcoJ3nw" name="Assignment6">
+    <eAnnotations xmi:id="_Datg8Do_Ee6ev_AfcoJ3nw" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_Datg8To_Ee6ev_AfcoJ3nw" source="codegen">
+        <details xmi:id="_Datg8jo_Ee6ev_AfcoJ3nw" key="codegenDirectory" value="/Assignment6/src"/>
+        <details xmi:id="_D9GcUDo_Ee6ev_AfcoJ3nw" key="AssociatedSourceCode" value="/Assignment6/src/Beverage.java;4227421228/1;/Assignment6/src/Alcohol.java;2968752675/1;/Assignment6/src/Coffee.java;2778730346/1;/Assignment6/src/Smoothie.java;2957740664/1;/Assignment6/src/Day.java;476551686/1;/Assignment6/src/Size.java;125164719/1;/Assignment6/src/Type.java;38664837/1;/Assignment6/src/BevShopDriverApp.java;2958797376/1;/Assignment6/src/Customer.java;130583307/1;/Assignment6/src/Order.java;3394182129/1;/Assignment6/src/BevShop.java;2740421857/1;/Assignment6/src/BevShopInterface.java;3637622424/1;/Assignment6/src/OrderInterface.java;3618568479/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_D5P3EDo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeIDo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeITo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeIjo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeIzo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeJDo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeJTo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_D5QeJjo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_D5RFMDo_Ee6ev_AfcoJ3nw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_D5MzwDo_Ee6ev_AfcoJ3nw" name="Beverage" isAbstract="true">
+      <ownedComment xmi:id="_kFOSgDpDEe6ev_AfcoJ3nw">
+        <body>Abstract class representing different types of beverages available in the shop.
+Subclasses such as Coffee, Smoothie, and Alcohol extend this class to provide specific implementations.</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_D55-YDo_Ee6ev_AfcoJ3nw" name="bevName" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_D55-YTo_Ee6ev_AfcoJ3nw" name="type" type="_KFTUNTpAEe6ev_AfcoJ3nw" isReadOnly="true"/>
+      <ownedAttribute xmi:id="_D56lcDo_Ee6ev_AfcoJ3nw" name="size" visibility="private" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+      <ownedAttribute xmi:id="_D56lcjo_Ee6ev_AfcoJ3nw" name="BASE_PRICE" visibility="private" isLeaf="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_D57MgDo_Ee6ev_AfcoJ3nw" value="2.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_D57zkTo_Ee6ev_AfcoJ3nw" name="SIZE_PRICE" visibility="private" isLeaf="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_D57zkjo_Ee6ev_AfcoJ3nw" value="1.0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6EWcDo_Ee6ev_AfcoJ3nw" name="getBasePrice" specification="_D5S6YDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_D6EWcTo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return BASE_PRICE;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6EWcjo_Ee6ev_AfcoJ3nw" name="getSize" specification="_D5UIgDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_kFNrdTpDEe6ev_AfcoJ3nw" type="_KFSGEDpAEe6ev_AfcoJ3nw" direction="return"/>
+        <language>java</language>
+        <body>return size;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6EWdDo_Ee6ev_AfcoJ3nw" name="addSizePrice" specification="_D5UvkDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_D6EWdTo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (size == Size.SMALL) {
+         return BASE_PRICE;
+     } else if (size == Size.MEDIUM) {
+         return BASE_PRICE + SIZE_PRICE;
+     } else { // size == Size.LARGE
+         return BASE_PRICE + (SIZE_PRICE * 2);
+     }
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6EWdjo_Ee6ev_AfcoJ3nw" name="toString" specification="_D5VWoTo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_D6EWdzo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return bevName + &quot;,&quot; + size;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_D6E9gDo_Ee6ev_AfcoJ3nw" name="equals" specification="_D53iITo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_D6E9gTo_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_D6E9gjo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (this == anotherBev) {
+         return true;
+     }
+     if (!(anotherBev instanceof Beverage)) {
+         return false;
+     }
+     Beverage other = (Beverage) anotherBev;
+     return bevName.equals(other.bevName) &amp;&amp; type == other.type &amp;&amp; size == other.size;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kFNrcDpDEe6ev_AfcoJ3nw" name="Beverage" specification="_kFLPMDpDEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_kFNrcTpDEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_kFNrcjpDEe6ev_AfcoJ3nw" name="type" type="_KFTUNTpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_kFNrczpDEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_kFNrdDpDEe6ev_AfcoJ3nw" type="_D5MzwDo_Ee6ev_AfcoJ3nw" direction="return"/>
+        <language>java</language>
+        <body>this.bevName = bevName;
+     this.type = type;
+     this.size = size;
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_D5S6YDo_Ee6ev_AfcoJ3nw" name="getBasePrice" method="_D6EWcDo_Ee6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_kFOSgjpDEe6ev_AfcoJ3nw">
+          <body>Gets the base price for all beverages.
+     * 
+     * @return The base price</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_D5ThcDo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_D5UIgDo_Ee6ev_AfcoJ3nw" name="getSize" method="_D6EWcjo_Ee6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_kFOSgzpDEe6ev_AfcoJ3nw">
+          <body>Gets the size of the beverage.
+     * 
+     * @return The beverage size</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_D51F4Do_Ee6ev_AfcoJ3nw" type="_KFSGEDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_D5UvkDo_Ee6ev_AfcoJ3nw" name="addSizePrice" method="_D6EWdDo_Ee6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_kFOShDpDEe6ev_AfcoJ3nw">
+          <body>Calculates the price of the beverage based on its size.
+     * 
+     * @return The calculated price</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_D5VWoDo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_D5VWoTo_Ee6ev_AfcoJ3nw" name="toString" method="_D6EWdjo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_D5VWojo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_D5XL0Do_Ee6ev_AfcoJ3nw" name="calcPrice" isAbstract="true">
+        <ownedComment xmi:id="_kFOShTpDEe6ev_AfcoJ3nw">
+          <body>Abstract method to be implemented by subclasses.
+     * Calculates the price of the beverage.
+     * 
+     * @return The calculated price</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_D5XL0To_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_D53iITo_Ee6ev_AfcoJ3nw" name="equals" method="_D6E9gDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_D53iIjo_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_D54JMDo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_kFLPMDpDEe6ev_AfcoJ3nw" name="Beverage" method="_kFNrcDpDEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_kFL2RDpDEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_kFL2RTpDEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_kFOSgTpDEe6ev_AfcoJ3nw">
+          <body>Constructs a new Beverage object with the given parameters.
+     * 
+     * @param bevName The name of the beverage
+     * @param type The type of the beverage
+     * @param size The size of the beverage</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_kFL2QDpDEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_kFL2QTpDEe6ev_AfcoJ3nw" name="type" type="_KFTUNTpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_kFL2QjpDEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_kFL2QzpDEe6ev_AfcoJ3nw" type="_D5MzwDo_Ee6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_D52UADo_Ee6ev_AfcoJ3nw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_D52UATo_Ee6ev_AfcoJ3nw" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_D527EDo_Ee6ev_AfcoJ3nw" name="Object"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_KFPp0DpAEe6ev_AfcoJ3nw" name="Comparable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_BT1ekDpAEe6ev_AfcoJ3nw" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_BUIZgDpAEe6ev_AfcoJ3nw" name="Scanner"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_KFEqsDpAEe6ev_AfcoJ3nw" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_KFFRwTpAEe6ev_AfcoJ3nw" name="List"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_SmGtEDo_Ee6ev_AfcoJ3nw" name="Alcohol">
+      <ownedComment xmi:id="_g4_AADpDEe6ev_AfcoJ3nw">
+        <body>This class represents an Alcohol beverage that extends the Beverage class.
+It contains additional information about whether the beverage is offered during weekends
+and calculates the price of the alcohol based on its attributes.</body>
+      </ownedComment>
+      <generalization xmi:id="_SmmcUTo_Ee6ev_AfcoJ3nw" general="_D5MzwDo_Ee6ev_AfcoJ3nw"/>
+      <ownedAttribute xmi:id="_SmmcUjo_Ee6ev_AfcoJ3nw" name="isWeekend" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_SmoRhTo_Ee6ev_AfcoJ3nw" name="calcPrice" specification="_SmK-gDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_SmoRhjo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>double sizePrice = addSizePrice();
+     double totalCost = sizePrice;
+     if (isWeekend) {
+         totalCost += 0.6; // Additional cost for drinks offered during weekends
+     }
+     return totalCost;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Smo4kDo_Ee6ev_AfcoJ3nw" name="toString" specification="_SmNawTo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Smo4kTo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return String.format(&quot;%s,%s,%b,%.2f&quot;, getBevName(), getSize(), isWeekend, calcPrice());
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Smo4kjo_Ee6ev_AfcoJ3nw" name="equals" specification="_SmlOMTo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Smo4kzo_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_Smo4lDo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (this == anotherBev) return true;
+     if (anotherBev == null || getClass() != anotherBev.getClass()) return false;
+     if (!super.equals(anotherBev)) return false;
+
+     Alcohol alcohol = (Alcohol) anotherBev;
+     return isWeekend == alcohol.isWeekend;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Smo4lTo_Ee6ev_AfcoJ3nw" name="isWeekend" specification="_SmPP8Do_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Smo4ljo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return isWeekend;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_g4-Y8DpDEe6ev_AfcoJ3nw" name="Alcohol" specification="_g49K0DpDEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_g4-Y8TpDEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_g4-Y8jpDEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_g4-Y8zpDEe6ev_AfcoJ3nw" name="isWeekend">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_g4-Y9DpDEe6ev_AfcoJ3nw" type="_SmGtEDo_Ee6ev_AfcoJ3nw" direction="return"/>
+        <language>java</language>
+        <body>super(bevName, Type.ALCOHOL, size);
+     this.isWeekend = isWeekend;
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_SmK-gDo_Ee6ev_AfcoJ3nw" name="calcPrice" method="_SmoRhTo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_SmLlkDo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_SmNawTo_Ee6ev_AfcoJ3nw" name="toString" method="_Smo4kDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_SmOB0Do_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_SmPP8Do_Ee6ev_AfcoJ3nw" name="isWeekend" method="_Smo4lTo_Ee6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_g4_AAjpDEe6ev_AfcoJ3nw">
+          <body>Checks if the alcohol beverage is offered during weekends.
+     *
+     * @return True if the beverage is offered during weekends; false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_SmPP8To_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_SmlOMTo_Ee6ev_AfcoJ3nw" name="equals" method="_Smo4kjo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_SmlOMjo_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_Sml1QDo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_g49K0DpDEe6ev_AfcoJ3nw" name="Alcohol" method="_g4-Y8DpDEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_g49x4DpDEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_g49x4TpDEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_g4_AATpDEe6ev_AfcoJ3nw">
+          <body>Constructs an Alcohol object using the given values.
+     *
+     * @param bevName   Name of the beverage
+     * @param size      Size of the beverage
+     * @param isWeekend Whether the beverage is offered during weekends or not</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_g49K0TpDEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_g49K0jpDEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_g49K0zpDEe6ev_AfcoJ3nw" name="isWeekend">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_g49K1DpDEe6ev_AfcoJ3nw" type="_SmGtEDo_Ee6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XiJJQDo_Ee6ev_AfcoJ3nw" name="Coffee">
+      <ownedComment xmi:id="_8MlUFjpDEe6ev_AfcoJ3nw">
+        <body>Subclass representing the Coffee beverage type.
+Inherits from the Beverage class.</body>
+      </ownedComment>
+      <generalization xmi:id="_XiZA4jo_Ee6ev_AfcoJ3nw" general="_D5MzwDo_Ee6ev_AfcoJ3nw"/>
+      <ownedAttribute xmi:id="_XiZn8Do_Ee6ev_AfcoJ3nw" name="extraShot" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_XibdITo_Ee6ev_AfcoJ3nw" name="extraSyrup" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_XicEMTo_Ee6ev_AfcoJ3nw" name="EXTRA_COST" visibility="private" isLeaf="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_XicEMjo_Ee6ev_AfcoJ3nw" value="0.5"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Xid5Zjo_Ee6ev_AfcoJ3nw" name="getExtraSyrup" specification="_XiK-cDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Xid5Zzo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return extraSyrup;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Xid5aDo_Ee6ev_AfcoJ3nw" name="calcPrice" specification="_XiLlgDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Xid5aTo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>double sizePrice = addSizePrice();
+     double totalPrice = sizePrice;
+
+     if (extraShot) {
+         totalPrice += EXTRA_COST;
+     }
+     if (extraSyrup) {
+         totalPrice += EXTRA_COST;
+     }
+
+     return totalPrice;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_XiegcDo_Ee6ev_AfcoJ3nw" name="toString" specification="_XiMzoTo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_XiegcTo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return getBevName() + &quot;,&quot; + getSize() + &quot;,&quot; + extraShot + &quot;,&quot; + extraSyrup + &quot;,&quot; + calcPrice();
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Xiegcjo_Ee6ev_AfcoJ3nw" name="equals" specification="_XiYZ0Do_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Xiegczo_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_XiegdDo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (!super.equals(anotherBev)) {
+         return false;
+     }
+     Coffee other = (Coffee) anotherBev;
+     return extraShot == other.extraShot &amp;&amp; extraSyrup == other.extraSyrup;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_8MlUEDpDEe6ev_AfcoJ3nw" name="Coffee" specification="_8MkF8DpDEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_8MlUETpDEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8MlUEjpDEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_8MlUEzpDEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8MlUFDpDEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8MlUFTpDEe6ev_AfcoJ3nw" type="_XiJJQDo_Ee6ev_AfcoJ3nw" direction="return"/>
+        <language>java</language>
+        <body>super(bevName, Type.COFFEE, size);
+     this.extraShot = extraShot;
+     this.extraSyrup = extraSyrup;
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_XiK-cDo_Ee6ev_AfcoJ3nw" name="getExtraSyrup" method="_Xid5Zjo_Ee6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_8MlUGDpDEe6ev_AfcoJ3nw">
+          <body>Checks if extra syrup is added to the coffee beverage.
+     * 
+     * @return True if extra syrup is added, false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_XiK-cTo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_XiLlgDo_Ee6ev_AfcoJ3nw" name="calcPrice" method="_Xid5aDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_XiLlgTo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_XiMzoTo_Ee6ev_AfcoJ3nw" name="toString" method="_XiegcDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_XiMzojo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_XiYZ0Do_Ee6ev_AfcoJ3nw" name="equals" method="_Xiegcjo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_XiYZ0To_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_XiYZ0jo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_8MkF8DpDEe6ev_AfcoJ3nw" name="Coffee" method="_8MlUEDpDEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_8MktATpDEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_8MktAjpDEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_8MlUFzpDEe6ev_AfcoJ3nw">
+          <body>Constructs a new Coffee object with the given parameters.
+     * 
+     * @param bevName The name of the coffee beverage
+     * @param size The size of the coffee beverage
+     * @param extraShot Indicates whether an extra shot of coffee is added
+     * @param extraSyrup Indicates whether extra syrup is added</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_8MkF8TpDEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8MkF8jpDEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_8MkF8zpDEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8MkF9DpDEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_8MktADpDEe6ev_AfcoJ3nw" type="_XiJJQDo_Ee6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_abtXYDo_Ee6ev_AfcoJ3nw" name="Smoothie">
+      <ownedComment xmi:id="_HomEYDpEEe6ev_AfcoJ3nw">
+        <body>A subclass of Beverage representing a Smoothie beverage.
+Contains additional information about the number of fruits and whether protein is added.
+Smoothies have additional costs for protein and each fruit.</body>
+      </ownedComment>
+      <generalization xmi:id="_ab5kojo_Ee6ev_AfcoJ3nw" general="_D5MzwDo_Ee6ev_AfcoJ3nw"/>
+      <ownedAttribute xmi:id="_ab6LsDo_Ee6ev_AfcoJ3nw" name="numOfFruits" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ab6LsTo_Ee6ev_AfcoJ3nw" name="addProtein" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ab6ywTo_Ee6ev_AfcoJ3nw" name="PROTEIN_COST" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ab6ywjo_Ee6ev_AfcoJ3nw" value="1.50"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ab6ywzo_Ee6ev_AfcoJ3nw" name="FRUIT_COST" visibility="private" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ab6yxDo_Ee6ev_AfcoJ3nw" value="0.50"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ab7Z1jo_Ee6ev_AfcoJ3nw" name="getAddProtein" specification="_abulgDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_ab7Z1zo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return addProtein;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ab7Z2Do_Ee6ev_AfcoJ3nw" name="calcPrice" specification="_abvMkDo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_ab7Z2To_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>double sizePrice = addSizePrice();
+     double totalCost = sizePrice;
+
+     if (addProtein) {
+         totalCost += PROTEIN_COST;
+     }
+
+     totalCost += numOfFruits * FRUIT_COST;
+     return totalCost;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ab7Z2jo_Ee6ev_AfcoJ3nw" name="toString" specification="_abvzoTo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_ab7Z2zo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return String.format(&quot;%s,%s,%s,%s,%s&quot;,
+             getBevName(), getSize(), addProtein, numOfFruits, calcPrice());
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ab8A4Do_Ee6ev_AfcoJ3nw" name="equals" specification="_ab49kzo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_ab8A4To_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_ab8A4jo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (!(anotherBev instanceof Smoothie)) {
+         return false;
+     }
+     Smoothie otherSmoothie = (Smoothie) anotherBev;
+     return super.equals(otherSmoothie) &amp;&amp;
+            this.numOfFruits == otherSmoothie.numOfFruits &amp;&amp;
+            this.addProtein == otherSmoothie.addProtein;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_HoldUjpEEe6ev_AfcoJ3nw" name="Smoothie" specification="_Hok2QDpEEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_HoldUzpEEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_HoldVDpEEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_HoldVTpEEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_HoldVjpEEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_HoldVzpEEe6ev_AfcoJ3nw" type="_abtXYDo_Ee6ev_AfcoJ3nw" direction="return"/>
+        <language>java</language>
+        <body>super(bevName, Type.SMOOTHIE, size);
+     this.numOfFruits = numOfFruits;
+     this.addProtein = addProtein;
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_abulgDo_Ee6ev_AfcoJ3nw" name="getAddProtein" method="_ab7Z1jo_Ee6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_HomrcDpEEe6ev_AfcoJ3nw">
+          <body>Indicates whether protein is added to the smoothie.
+     * 
+     * @return True if protein is added, false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_abulgTo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_abvMkDo_Ee6ev_AfcoJ3nw" name="calcPrice" method="_ab7Z2Do_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_abvMkTo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_abvzoTo_Ee6ev_AfcoJ3nw" name="toString" method="_ab7Z2jo_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_abvzojo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ab49kzo_Ee6ev_AfcoJ3nw" name="equals" method="_ab8A4Do_Ee6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_ab49lDo_Ee6ev_AfcoJ3nw" name="anotherBev" type="_D527EDo_Ee6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_ab49lTo_Ee6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Hok2QDpEEe6ev_AfcoJ3nw" name="Smoothie" method="_HoldUjpEEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_HoldUDpEEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_HoldUTpEEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_HomEYTpEEe6ev_AfcoJ3nw">
+          <body>Creates a Smoothie object with the given parameters.
+     * 
+     * @param bevName    Name of the smoothie beverage
+     * @param size       Size of the smoothie beverage
+     * @param numOfFruits Number of fruits to be added
+     * @param addProtein Whether protein is added</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_Hok2QTpEEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Hok2QjpEEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_Hok2QzpEEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Hok2RDpEEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Hok2RTpEEe6ev_AfcoJ3nw" type="_abtXYDo_Ee6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BT3TwDpAEe6ev_AfcoJ3nw" name="BevShopDriverApp">
+      <ownedComment xmi:id="_M_TqYDpEEe6ev_AfcoJ3nw">
+        <body>
+The &quot;BevShopDriverApp&quot; Java program facilitates interactive beverage ordering,
+where customers provide their details, choose from various beverage options,
+and receive order summaries based on age restrictions and beverage selections.</body>
+      </ownedComment>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_BUKOsDpAEe6ev_AfcoJ3nw" name="main" specification="_BT4h4DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_BUKOsTpAEe6ev_AfcoJ3nw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BUKOsjpAEe6ev_AfcoJ3nw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>// Create an instance of BevShop class
+     BevShop bevShop = new BevShop();
+     Scanner scanner = new Scanner(System.in);
+     
+     // Flag to control whether the user wants to continue ordering
+     boolean continueOrdering = true;
+     
+     while (continueOrdering) {
+         // Display information about order limits and age requirement
+         System.out.println(&quot;The current order in process can have at most &quot; + bevShop.getMaxOrderForAlcohol() +
+                            &quot; alcoholic beverages.&quot;);
+         System.out.println(&quot;The minimum age to order alcohol drink is &quot; + bevShop.getMinAgeForAlcohol());
+         
+         // Collect customer information
+         System.out.println(&quot;Start please a new order:&quot;);
+         System.out.print(&quot;Enter your name: &quot;);
+         String customerName = scanner.nextLine();
+         
+         System.out.print(&quot;Enter your age: &quot;);
+         int customerAge = scanner.nextInt();
+         scanner.nextLine(); // Consume the newline character
+         
+         System.out.print(&quot;Enter the day of the week (MONDAY, TUESDAY, etc.): &quot;);
+         String dayString = scanner.nextLine();
+         Day day = Day.valueOf(dayString.toUpperCase());
+
+         // Start a new order
+         bevShop.startNewOrder(10, day, customerName, customerAge);
+         System.out.println(&quot;Your Total Order for now is &quot; + bevShop.totalOrderPrice(bevShop.getCurrentOrder().getOrderNo()));
+
+         // Get customer information from the current order
+         Customer customer = bevShop.getCurrentOrder().getCustomer();
+         // Check if customer is eligible to order more
+         if (bevShop.isEligibleForMore()) {
+             if (bevShop.isValidAge(customer.getAge())) {
+                 System.out.println(&quot;Your age is above &quot; + (bevShop.getMinAgeForAlcohol() - 1) +
+                                    &quot; and you are eligible to order alcohol&quot;);
+             } else {
+                 System.out.println(&quot;You are not eligible to order alcohol.&quot;);
+             }
+
+             boolean orderMore = true;
+             while (orderMore) {
+                 // Offer beverage type choices
+                 System.out.println(&quot;Choose the type of beverage:\n1. Alcohol\n2. Coffee\n3. Smoothie&quot;);
+                 System.out.print(&quot;Enter your choice: &quot;);
+                 int beverageTypeChoice = scanner.nextInt();
+                 scanner.nextLine(); // Consume the newline character
+
+                 if (beverageTypeChoice == 1) {
+                     // Collect information for alcohol order
+                     System.out.print(&quot;Enter alcohol beverage name: &quot;);
+                     String bevName = scanner.nextLine();
+                     System.out.print(&quot;Enter beverage size (SMALL, MEDIUM, LARGE): &quot;);
+                     Size size = Size.valueOf(scanner.nextLine().toUpperCase());
+                     bevShop.processAlcoholOrder(bevName, size);
+                 } else if (beverageTypeChoice == 2 || beverageTypeChoice == 3) {
+                     // Collect information for coffee or smoothie order
+                     System.out.print(&quot;Enter beverage name: &quot;);
+                     String bevName = scanner.nextLine();
+                     System.out.print(&quot;Enter beverage size (SMALL, MEDIUM, LARGE): &quot;);
+                     Size size = Size.valueOf(scanner.nextLine().toUpperCase());
+
+                     if (beverageTypeChoice == 2) { // Coffee
+                         // Collect extra options for coffee
+                         System.out.print(&quot;Add extra shot? (yes/no): &quot;);
+                         boolean extraShot = scanner.nextLine().equalsIgnoreCase(&quot;yes&quot;);
+
+                         System.out.print(&quot;Add extra syrup? (yes/no): &quot;);
+                         boolean extraSyrup = scanner.nextLine().equalsIgnoreCase(&quot;yes&quot;);
+
+                         bevShop.processCoffeeOrder(bevName, size, extraShot, extraSyrup);
+                     } else if (beverageTypeChoice == 3) { // Smoothie
+                         // Collect additional options for smoothie
+                         int numOfFruits = 0;
+                         boolean addProtein = false;
+                         System.out.print(&quot;Enter number of fruits: &quot;);
+                         numOfFruits = scanner.nextInt();
+                         scanner.nextLine(); // Consume the newline character
+
+                         System.out.print(&quot;Add protein? (yes/no): &quot;);
+                         addProtein = scanner.nextLine().equalsIgnoreCase(&quot;yes&quot;);
+
+                         bevShop.processSmoothieOrder(bevName, size, numOfFruits, addProtein);
+                     }
+                 } else {
+                     System.out.println(&quot;Invalid choice.&quot;);
+                 }
+
+                 // Check if the customer wants to order more beverages
+                 System.out.print(&quot;Do you want to order more beverages? (yes/no): &quot;);
+                 String orderMoreChoice = scanner.nextLine();
+                 orderMore = orderMoreChoice.equalsIgnoreCase(&quot;yes&quot;);
+             }
+
+             // Display the current order details and total price
+             System.out.println(&quot;The current order of drinks is &quot; + bevShop.getCurrentOrder().getTotalItems());
+             System.out.println(&quot;The Total price on the Order is &quot; + bevShop.totalOrderPrice(bevShop.getCurrentOrder().getOrderNo()));
+             
+             // Rest of the order process ...
+
+             // Display a separator
+             System.out.println(&quot;#------------------------------------#&quot;);
+             
+             // Rest of the order process ...
+
+             // Display total price for the second order and overall total
+             System.out.println(&quot;\nTotal price on the second Order: &quot; + bevShop.totalOrderPrice(bevShop.getCurrentOrder().getOrderNo()));
+             System.out.println(&quot;Total amount for all Orders: &quot; + bevShop.totalMonthlySale());
+             
+             // Ask if the user wants to start a new order
+             System.out.print(&quot;Would you like to start a new order? (yes/no): &quot;);
+             String userChoice = scanner.nextLine();
+             continueOrdering = userChoice.equalsIgnoreCase(&quot;yes&quot;);
+         } else {
+             System.out.println(&quot;You have reached the maximum order limit.&quot;);
+             
+             // Ask if the user wants to start a new order
+             System.out.print(&quot;Would you like to start a new order? (yes/no): &quot;);
+             String userChoice = scanner.nextLine();
+             continueOrdering = userChoice.equalsIgnoreCase(&quot;yes&quot;);
+         }
+     }
+     
+     System.out.println(&quot;Thank you for using BevShopDriverApp!&quot;);
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_BT4h4DpAEe6ev_AfcoJ3nw" name="main" isStatic="true" method="_BUKOsDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_BT4h4TpAEe6ev_AfcoJ3nw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BT5I8DpAEe6ev_AfcoJ3nw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Fy3OoDpAEe6ev_AfcoJ3nw" name="Customer">
+      <ownedComment xmi:id="_-70hgDpDEe6ev_AfcoJ3nw">
+        <body>This class represents a customer with a name and age. It provides methods to
+create and manipulate customer objects.</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_FzCNwDpAEe6ev_AfcoJ3nw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_FzCNwTpAEe6ev_AfcoJ3nw" name="age">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_FzC00DpAEe6ev_AfcoJ3nw" name="Customer" specification="_Fy5D0DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_FzC00TpAEe6ev_AfcoJ3nw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_FzC00jpAEe6ev_AfcoJ3nw" name="age">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_FzC00zpAEe6ev_AfcoJ3nw" type="_Fy3OoDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>this.name = name;
+     this.age = age;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_FzC01DpAEe6ev_AfcoJ3nw" name="Customer" specification="_FzBmsDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_FzC01TpAEe6ev_AfcoJ3nw" name="c" type="_Fy3OoDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_FzC01jpAEe6ev_AfcoJ3nw" type="_Fy3OoDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>this.name = c.name;
+     this.age = c.age;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_FzC01zpAEe6ev_AfcoJ3nw" name="toString" specification="_Fy6R8DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_FzC02DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return &quot;Customer: &quot; + name + &quot;, Age: &quot; + age;
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_Fy5D0DpAEe6ev_AfcoJ3nw" name="Customer" method="_FzC00DpAEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_Fy5q4DpAEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_Fy5q4TpAEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_Fy5D0TpAEe6ev_AfcoJ3nw" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Fy5D0jpAEe6ev_AfcoJ3nw" name="age">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Fy5q4jpAEe6ev_AfcoJ3nw" type="_Fy3OoDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Fy6R8DpAEe6ev_AfcoJ3nw" name="toString" method="_FzC01zpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_Fy65ADpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_FzBmsDpAEe6ev_AfcoJ3nw" name="Customer" method="_FzC01DpAEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_FzBmsjpAEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_FzBmszpAEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_FzBmsTpAEe6ev_AfcoJ3nw" name="c" type="_Fy3OoDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_FzBmtDpAEe6ev_AfcoJ3nw" type="_Fy3OoDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_KEsQMDpAEe6ev_AfcoJ3nw" name="Order">
+      <ownedComment xmi:id="_JSQJ0DpEEe6ev_AfcoJ3nw">
+        <body>Represents an order for beverages at Bradley shop.
+This class implements the OrderInterface for managing beverages in an order
+and Comparable for comparing orders based on order numbers.
+
+An order includes information such as order number, order time, order day, customer,
+and a list of beverages associated with the order.</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_KFUiUDpAEe6ev_AfcoJ3nw" name="orderNo" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KFUiUTpAEe6ev_AfcoJ3nw" name="orderTime" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KFVJYTpAEe6ev_AfcoJ3nw" name="orderDay" type="_KFQ38DpAEe6ev_AfcoJ3nw" isReadOnly="true"/>
+      <ownedAttribute xmi:id="_KFVJYjpAEe6ev_AfcoJ3nw" name="customer" visibility="private" type="_Fy3OoDpAEe6ev_AfcoJ3nw" association="_KFZa0DpAEe6ev_AfcoJ3nw"/>
+      <ownedAttribute xmi:id="_KFVJZDpAEe6ev_AfcoJ3nw" name="beverages" visibility="private" type="_D5MzwDo_Ee6ev_AfcoJ3nw" isOrdered="true" association="_KFZa0zpAEe6ev_AfcoJ3nw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KFVwcDpAEe6ev_AfcoJ3nw" value="*"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_KFPCwDpAEe6ev_AfcoJ3nw" client="_KEsQMDpAEe6ev_AfcoJ3nw" supplier="_KFJjMDpAEe6ev_AfcoJ3nw" contract="_KFJjMDpAEe6ev_AfcoJ3nw"/>
+      <interfaceRealization xmi:id="_KFQQ4TpAEe6ev_AfcoJ3nw" client="_KEsQMDpAEe6ev_AfcoJ3nw" supplier="_KFPp0DpAEe6ev_AfcoJ3nw" contract="_KFPp0DpAEe6ev_AfcoJ3nw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFWXgDpAEe6ev_AfcoJ3nw" name="Order" specification="_KFQ38jpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFWXgTpAEe6ev_AfcoJ3nw" name="orderTime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFWXgjpAEe6ev_AfcoJ3nw" name="orderDay" type="_KFQ38DpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFWXgzpAEe6ev_AfcoJ3nw" name="cust" type="_Fy3OoDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFWXhDpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>this.orderNo = generateOrder();
+     this.orderTime = orderTime;
+     this.orderDay = orderDay;
+     this.customer = new Customer(cust);
+     this.beverages = new ArrayList&lt;>();
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFWXhTpAEe6ev_AfcoJ3nw" name="generateOrder" specification="_KEteUDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFWXhjpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return (int) (Math.random() * 80000) + 10000;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFWXhzpAEe6ev_AfcoJ3nw" name="getOrderTime" specification="_KEteUjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFWXiDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return orderTime;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFW-kDpAEe6ev_AfcoJ3nw" name="getCustomer" specification="_KEuFYTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFW-kTpAEe6ev_AfcoJ3nw" type="_Fy3OoDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return new Customer(customer);
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFW-kjpAEe6ev_AfcoJ3nw" name="getDay" specification="_KEuFYjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFW-kzpAEe6ev_AfcoJ3nw" type="_KFQ38DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return orderDay;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFW-lDpAEe6ev_AfcoJ3nw" name="isWeekend" specification="_KEuFYzpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFW-lTpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return orderDay == Day.SATURDAY || orderDay == Day.SUNDAY;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFW-ljpAEe6ev_AfcoJ3nw" name="getBeverage" specification="_KEuscTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFW-lzpAEe6ev_AfcoJ3nw" name="itemNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFW-mDpAEe6ev_AfcoJ3nw" type="_D5MzwDo_Ee6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (itemNo >= 0 &amp;&amp; itemNo &lt; beverages.size()) {
+         return beverages.get(itemNo);
+     }
+     return null;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFW-mTpAEe6ev_AfcoJ3nw" name="getTotalItems" specification="_KEusczpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFW-mjpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return beverages.size();
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXloDpAEe6ev_AfcoJ3nw" name="addNewBeverage" specification="_KFSGEjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXloTpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFXlojpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFXlozpAEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFXlpDpAEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>Coffee coffee = new Coffee(bevName, size, extraShot, extraSyrup);
+     beverages.add(coffee);
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXlpTpAEe6ev_AfcoJ3nw" name="addNewBeverage" specification="_KFStIDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXlpjpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFXlpzpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <language>java</language>
+        <body>boolean isWeekend = false;
+ 	
+ 	if (orderDay == Day.SATURDAY || orderDay == Day.SUNDAY) {
+ 		isWeekend = true;
+ 	}
+     Alcohol alcohol = new Alcohol(bevName, size, isWeekend);
+     beverages.add(alcohol);
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXlqDpAEe6ev_AfcoJ3nw" name="addNewBeverage" specification="_KFTUMDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXlqTpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFXlqjpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFXlqzpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFXlrDpAEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>Smoothie smoothie = new Smoothie(bevName, size, numOfFruits, addProtein);
+     beverages.add(smoothie);
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXlrTpAEe6ev_AfcoJ3nw" name="calcOrderTotal" specification="_KEvTgDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXlrjpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>double total = 0;
+     for (Beverage beverage : beverages) {
+         total += beverage.calcPrice();
+     }
+     return total;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXlrzpAEe6ev_AfcoJ3nw" name="findNumOfBeveType" specification="_KFT7QTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXlsDpAEe6ev_AfcoJ3nw" name="type" type="_KFTUNTpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFXlsTpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>int count = 0;
+     for (Beverage beverage : beverages) {
+         if (beverage.getType() == type) {
+             count++;
+         }
+     }
+     return count;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXlsjpAEe6ev_AfcoJ3nw" name="toString" specification="_KEv6kTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXlszpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>StringBuilder sb = new StringBuilder();
+     sb.append(&quot;Order Number: &quot;).append(orderNo).append(&quot;\n&quot;);
+     sb.append(&quot;Order Time: &quot;).append(orderTime).append(&quot;\n&quot;);
+     sb.append(&quot;Order Day: &quot;).append(orderDay).append(&quot;\n&quot;);
+     sb.append(&quot;Customer: &quot;).append(customer).append(&quot;\n&quot;);
+     sb.append(&quot;Beverages:\n&quot;);
+     for (Beverage beverage : beverages) {
+         sb.append(beverage).append(&quot;\n&quot;);
+     }
+     return sb.toString();
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFXltDpAEe6ev_AfcoJ3nw" name="compareTo" specification="_KFGf4DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFXltTpAEe6ev_AfcoJ3nw" name="anotherOrder" type="_KEsQMDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFXltjpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (orderNo == anotherOrder.orderNo) {
+         return 0;
+     } else if (orderNo &lt; anotherOrder.orderNo) {
+         return -1;
+     } else {
+         return 1;
+     }
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_KEteUDpAEe6ev_AfcoJ3nw" name="generateOrder" method="_KFWXhTpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ0jpEEe6ev_AfcoJ3nw">
+          <body>Generates a random order number between 10000 and 90000.
+     *
+     * @return A randomly generated order number.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KEteUTpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEteUjpAEe6ev_AfcoJ3nw" name="getOrderTime" method="_KFWXhzpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ0zpEEe6ev_AfcoJ3nw">
+          <body>Retrieves the order time.
+     *
+     * @return The order time.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KEuFYDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEuFYTpAEe6ev_AfcoJ3nw" name="getCustomer" method="_KFW-kDpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ1DpEEe6ev_AfcoJ3nw">
+          <body>Retrieves a deep copy of the customer associated with the order.
+     *
+     * @return A deep copy of the customer.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFF40DpAEe6ev_AfcoJ3nw" type="_Fy3OoDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEuFYjpAEe6ev_AfcoJ3nw" name="getDay" method="_KFW-kjpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ1TpEEe6ev_AfcoJ3nw">
+          <body>Retrieves the day of the order.
+     *
+     * @return The day of the order.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFRfBTpAEe6ev_AfcoJ3nw" type="_KFQ38DpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEuFYzpAEe6ev_AfcoJ3nw" name="isWeekend" method="_KFW-lDpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ1jpEEe6ev_AfcoJ3nw">
+          <body>Checks if the order day is a weekend day.
+     *
+     * @return True if the order day is a weekend day, false otherwise.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KEuscDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEuscTpAEe6ev_AfcoJ3nw" name="getBeverage" method="_KFW-ljpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ1zpEEe6ev_AfcoJ3nw">
+          <body>Retrieves the beverage listed at the specified item number in the order.
+     *
+     * @param itemNo The item number of the beverage in the order.
+     * @return The beverage at the specified item number or null if not found.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KEuscjpAEe6ev_AfcoJ3nw" name="itemNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFF40TpAEe6ev_AfcoJ3nw" type="_D5MzwDo_Ee6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEusczpAEe6ev_AfcoJ3nw" name="getTotalItems" method="_KFW-mTpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ2DpEEe6ev_AfcoJ3nw">
+          <body>Retrieves the total number of beverages in the order.
+     *
+     * @return The total number of beverages in the order.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KEusdDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEvTgDpAEe6ev_AfcoJ3nw" name="calcOrderTotal" method="_KFXlrTpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQw4TpEEe6ev_AfcoJ3nw">
+          <body>Calculates the total cost of the order.
+     *
+     * @return The total cost of the order.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KEv6kDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KEv6kTpAEe6ev_AfcoJ3nw" name="toString" method="_KFXlsjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KEv6kjpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KFGf4DpAEe6ev_AfcoJ3nw" name="compareTo" method="_KFXltDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_KFGf4TpAEe6ev_AfcoJ3nw" name="anotherOrder" type="_KEsQMDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFGf4jpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KFQ38jpAEe6ev_AfcoJ3nw" name="Order" method="_KFWXgDpAEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_KFRfAjpAEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_KFRfAzpAEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_JSQJ0TpEEe6ev_AfcoJ3nw">
+          <body>Constructor to create an order.
+     *
+     * @param orderTime The time of the order (between 8 and 23).
+     * @param orderDay  The day of the order.
+     * @param cust      The customer placing the order.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFQ38zpAEe6ev_AfcoJ3nw" name="orderTime">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFRfADpAEe6ev_AfcoJ3nw" name="orderDay" type="_KFQ38DpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFRfATpAEe6ev_AfcoJ3nw" name="cust" type="_Fy3OoDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFRfBDpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KFSGEjpAEe6ev_AfcoJ3nw" name="addNewBeverage" method="_KFXloDpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ2TpEEe6ev_AfcoJ3nw">
+          <body>Adds a new coffee beverage to the order.
+     *
+     * @param bevName    The name of the beverage.
+     * @param size       The size of the beverage.
+     * @param extraShot  True if an extra shot is added, false otherwise.
+     * @param extraSyrup True if extra syrup is added, false otherwise.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFSGEzpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFSGFDpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFSGFTpAEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFSGFjpAEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KFStIDpAEe6ev_AfcoJ3nw" name="addNewBeverage" method="_KFXlpTpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQJ2jpEEe6ev_AfcoJ3nw">
+          <body>Adds a new alcohol beverage to the order.
+     *
+     * @param bevName The name of the beverage.
+     * @param size    The size of the beverage.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFStITpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFStIjpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KFTUMDpAEe6ev_AfcoJ3nw" name="addNewBeverage" method="_KFXlqDpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQw4DpEEe6ev_AfcoJ3nw">
+          <body>Adds a new smoothie beverage to the order.
+     *
+     * @param bevName    The name of the beverage.
+     * @param size       The size of the beverage.
+     * @param numOfFruits The number of fruits added.
+     * @param addProtein True if protein is added, false otherwise.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFTUMTpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFTUMjpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFTUMzpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_KFTUNDpAEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_KFT7QTpAEe6ev_AfcoJ3nw" name="findNumOfBeveType" method="_KFXlrzpAEe6ev_AfcoJ3nw">
+        <ownedComment xmi:id="_JSQw4jpEEe6ev_AfcoJ3nw">
+          <body>Finds the number of beverages of a specific type in the order.
+     *
+     * @param type The type of beverage to search for.
+     * @return The number of beverages of the specified type in the order.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_KFT7QjpAEe6ev_AfcoJ3nw" name="type" type="_KFTUNTpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_KFT7QzpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_KFJjMDpAEe6ev_AfcoJ3nw" name="OrderInterface">
+      <ownedComment xmi:id="_il4HAzpAEe6ev_AfcoJ3nw">
+        <body>Interface for an Order
+
+@author Farnaz Eivazi
+@version 8/22/13/2022
+ *</body>
+      </ownedComment>
+      <ownedOperation xmi:id="_ilu9EDpAEe6ev_AfcoJ3nw" name="isWeekend">
+        <ownedComment xmi:id="_il4HBDpAEe6ev_AfcoJ3nw">
+          <body>
+	 * @return true if the day is a weekend day (Saturday or Sunday)</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_ilu9ETpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ilvkIDpAEe6ev_AfcoJ3nw" name="getBeverage">
+        <ownedComment xmi:id="_il4HBTpAEe6ev_AfcoJ3nw">
+          <body>returns the beverage listed in the itemNo of the order, for example if
+	 * itemNo is 0 this method will return the first beverage in the order
+	 * Note: this method returns the shallow copy of the Beverage
+	 * 
+	 * @return the beverage listed in the itemNo of the order or null if there
+	 *         is no item in the order
+	 *</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_ilvkITpAEe6ev_AfcoJ3nw" name="itemNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_il2R0DpAEe6ev_AfcoJ3nw" type="_D5MzwDo_Ee6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ilwLMDpAEe6ev_AfcoJ3nw" name="calcOrderTotal">
+        <ownedComment xmi:id="_il4uEjpAEe6ev_AfcoJ3nw">
+          <body>Calculates and returns the total amount for this order
+	 * @return total amount for this order</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_ilwLMTpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_il244DpAEe6ev_AfcoJ3nw" name="addNewBeverage">
+        <ownedComment xmi:id="_il4HBjpAEe6ev_AfcoJ3nw">
+          <body>adds coffee order to this order
+	 * @param bevName beverage name
+	 * @param size beverage size of type SIZE
+	 * @param extraShot true if the coffee beverage has extra shot , false otherwise
+	 * @param extraSyrup true if the coffee beverage has extra syrup , false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_il244TpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_il244jpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_il244zpAEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_il245DpAEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_il3f8DpAEe6ev_AfcoJ3nw" name="addNewBeverage">
+        <ownedComment xmi:id="_il4uEDpAEe6ev_AfcoJ3nw">
+          <body>adds alcohol order to this order
+	 * @param bevName beverage name
+	 * @param size beverage size</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_il3f8TpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_il3f8jpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_il3f8zpAEe6ev_AfcoJ3nw" name="addNewBeverage">
+        <ownedComment xmi:id="_il4uETpAEe6ev_AfcoJ3nw">
+          <body>Adds the Smoothie beverage to this order
+	 * @param bevName beverage name
+	 * @param size beverage size
+	 * @param numOfFruits number of fruits added 
+	 * @param addProtein true if protein is added, false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_il3f9DpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_il3f9TpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_il3f9jpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_il3f9zpAEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_il4HADpAEe6ev_AfcoJ3nw" name="findNumOfBeveType">
+        <ownedComment xmi:id="_il4uEzpAEe6ev_AfcoJ3nw">
+          <body>returns the number of beverages of same type in an order
+	 * @param type the type of the beverage
+	 * @return number of beverages of type type in this order</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_il4HATpAEe6ev_AfcoJ3nw" name="type" type="_KFTUNTpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_il4HAjpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_KFQ38DpAEe6ev_AfcoJ3nw" name="Day"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_KFSGEDpAEe6ev_AfcoJ3nw" name="Size"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_KFTUNTpAEe6ev_AfcoJ3nw" name="Type"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KFZa0DpAEe6ev_AfcoJ3nw" name="" memberEnd="_KFZa0TpAEe6ev_AfcoJ3nw _KFVJYjpAEe6ev_AfcoJ3nw">
+      <ownedEnd xmi:id="_KFZa0TpAEe6ev_AfcoJ3nw" name="" type="_KEsQMDpAEe6ev_AfcoJ3nw" association="_KFZa0DpAEe6ev_AfcoJ3nw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_KFZa0zpAEe6ev_AfcoJ3nw" name="" memberEnd="_KFZa1DpAEe6ev_AfcoJ3nw _KFVJZDpAEe6ev_AfcoJ3nw">
+      <ownedEnd xmi:id="_KFZa1DpAEe6ev_AfcoJ3nw" name="" type="_KEsQMDpAEe6ev_AfcoJ3nw" association="_KFZa0zpAEe6ev_AfcoJ3nw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WXhTwDpAEe6ev_AfcoJ3nw" name="BevShop">
+      <ownedComment xmi:id="_o2__cDpDEe6ev_AfcoJ3nw">
+        <body>The `BevShop` class represents a beverage shop that implements the `BevShopInterface`,
+providing functionalities for managing orders of various beverages.
+It tracks the order history, enforces business rules, and calculates statistics.</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_WX9YoDpAEe6ev_AfcoJ3nw" name="numOfAlcoholDrinks" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WX9YojpAEe6ev_AfcoJ3nw" name="orders" visibility="private" type="_KEsQMDpAEe6ev_AfcoJ3nw" isOrdered="true" association="_WYCRIDpAEe6ev_AfcoJ3nw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WX9YozpAEe6ev_AfcoJ3nw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WX9_sDpAEe6ev_AfcoJ3nw" name="MAX_FRUIT" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_WX9_sTpAEe6ev_AfcoJ3nw" value="5"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WX9_sjpAEe6ev_AfcoJ3nw" name="MAX_ORDER_FOR_ALCOHOL" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_WX9_szpAEe6ev_AfcoJ3nw" value="3"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WX9_tDpAEe6ev_AfcoJ3nw" name="MIN_TIME" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_WX9_tTpAEe6ev_AfcoJ3nw" value="8"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WX9_tjpAEe6ev_AfcoJ3nw" name="MAX_TIME" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_WX9_tzpAEe6ev_AfcoJ3nw" value="23"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_WX9_uDpAEe6ev_AfcoJ3nw" name="MIN_AGE_FOR_ALCOHOL" isLeaf="true" isStatic="true" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_WX9_uTpAEe6ev_AfcoJ3nw" value="21"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_WX8KgTpAEe6ev_AfcoJ3nw" client="_WXhTwDpAEe6ev_AfcoJ3nw" supplier="_WX7jcDpAEe6ev_AfcoJ3nw" contract="_WX7jcDpAEe6ev_AfcoJ3nw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_N0DpAEe6ev_AfcoJ3nw" name="BevShop" specification="_WXih4DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_N0TpAEe6ev_AfcoJ3nw" type="_WXhTwDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>numOfAlcoholDrinks = 0;
+     orders = new ArrayList&lt;>();
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_N0jpAEe6ev_AfcoJ3nw" name="isValidTime" specification="_WXih5DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_N0zpAEe6ev_AfcoJ3nw" name="time">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_N1DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return time >= MIN_TIME &amp;&amp; time &lt;= MAX_TIME;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_N1TpAEe6ev_AfcoJ3nw" name="getMaxNumOfFruits" specification="_WXjI9DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_N1jpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return MAX_FRUIT;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_N1zpAEe6ev_AfcoJ3nw" name="getMinAgeForAlcohol" specification="_WXjwAzpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_N2DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return MIN_AGE_FOR_ALCOHOL;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_04DpAEe6ev_AfcoJ3nw" name="isMaxFruit" specification="_WXkXEjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_04TpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_04jpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return numOfFruits > MAX_FRUIT;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_04zpAEe6ev_AfcoJ3nw" name="getMaxOrderForAlcohol" specification="_WXk-IjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_05DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return MAX_ORDER_FOR_ALCOHOL;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_05TpAEe6ev_AfcoJ3nw" name="isEligibleForMore" specification="_WXk-JzpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_05jpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return numOfAlcoholDrinks &lt; MAX_ORDER_FOR_ALCOHOL;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_05zpAEe6ev_AfcoJ3nw" name="getNumOfAlcoholDrink" specification="_WXllNDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_06DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return numOfAlcoholDrinks;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_06TpAEe6ev_AfcoJ3nw" name="isValidAge" specification="_WXmMQjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_06jpAEe6ev_AfcoJ3nw" name="age">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_06zpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return age >= MIN_AGE_FOR_ALCOHOL;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_07DpAEe6ev_AfcoJ3nw" name="startNewOrder" specification="_WX35EDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_07TpAEe6ev_AfcoJ3nw" name="time">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_07jpAEe6ev_AfcoJ3nw" name="day" type="_KFQ38DpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_WX_07zpAEe6ev_AfcoJ3nw" name="customerName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_08DpAEe6ev_AfcoJ3nw" name="customerAge">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>Order newOrder = new Order(time, day, new Customer(customerName, customerAge));
+     orders.add(newOrder);
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_08TpAEe6ev_AfcoJ3nw" name="processCoffeeOrder" specification="_WX4gIzpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_08jpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_08zpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_WX_09DpAEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_09TpAEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>Order currentOrder = getCurrentOrder();
+     if (currentOrder != null) {
+         if (isValidTime(currentOrder.getOrderTime())) {
+             currentOrder.addNewBeverage(bevName, size, extraShot, extraSyrup);
+         } else {
+             System.out.println(&quot;Cannot add coffee beverage. Invalid order time.&quot;);
+         }
+     } else {
+         System.out.println(&quot;No current order to add beverage to.&quot;);
+     }
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WX_09jpAEe6ev_AfcoJ3nw" name="processAlcoholOrder" specification="_WX5HMzpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX_09zpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX_0-DpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <language>java</language>
+        <body>Order currentOrder = getCurrentOrder();
+     if (currentOrder != null) {
+         if (isValidTime(currentOrder.getOrderTime()) &amp;&amp; isValidAge(currentOrder.getCustomer().getAge())) {
+             currentOrder.addNewBeverage(bevName, size);
+             numOfAlcoholDrinks++;
+         } else {
+             System.out.println(&quot;Cannot add alcohol beverage. Invalid order time or customer age.&quot;);
+         }
+     } else {
+         System.out.println(&quot;No current order to add beverage to.&quot;);
+     }
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAb8DpAEe6ev_AfcoJ3nw" name="processSmoothieOrder" specification="_WX5uRTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAb8TpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WYAb8jpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_WYAb8zpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WYAb9DpAEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>Order currentOrder = getCurrentOrder();
+     if (currentOrder != null) {
+         if (isValidTime(currentOrder.getOrderTime()) &amp;&amp; !isMaxFruit(numOfFruits)) {
+             currentOrder.addNewBeverage(bevName, size, numOfFruits, addProtein);
+         } else {
+             System.out.println(&quot;Cannot add smoothie beverage. Invalid order time or exceeding maximum fruits.&quot;);
+         }
+     } else {
+         System.out.println(&quot;No current order to add beverage to.&quot;);
+     }
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAb9TpAEe6ev_AfcoJ3nw" name="findOrder" specification="_WXmzUDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAb9jpAEe6ev_AfcoJ3nw" name="orderNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WYAb9zpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>for (int i = 0; i &lt; orders.size(); i++) {
+         if (orders.get(i).getOrderNo() == orderNo) {
+             return i;
+         }
+     }
+     return -1;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAb-DpAEe6ev_AfcoJ3nw" name="totalOrderPrice" specification="_WXnaZDpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAb-TpAEe6ev_AfcoJ3nw" name="orderNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WYAb-jpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>int index = findOrder(orderNo);
+     if (index != -1) {
+         return orders.get(index).calcOrderTotal();
+     }
+     return 0.0;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAb-zpAEe6ev_AfcoJ3nw" name="totalMonthlySale" specification="_WXoBczpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAb_DpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>double totalSale = 0;
+     for (Order order : orders) {
+         totalSale += order.calcOrderTotal();
+     }
+     return totalSale;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAb_TpAEe6ev_AfcoJ3nw" name="totalNumOfMonthlyOrders" specification="_WXoogTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAb_jpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return orders.size();
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAb_zpAEe6ev_AfcoJ3nw" name="getCurrentOrder" specification="_WXoohjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAcADpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (!orders.isEmpty()) {
+         return orders.get(orders.size() - 1);
+     }
+     return null;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAcATpAEe6ev_AfcoJ3nw" name="getOrderAtIndex" specification="_WXpPkzpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAcAjpAEe6ev_AfcoJ3nw" name="index">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WYAcAzpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (index >= 0 &amp;&amp; index &lt; orders.size()) {
+         return orders.get(index);
+     }
+     return null;
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAcBDpAEe6ev_AfcoJ3nw" name="sortOrders" specification="_WXp2ojpAEe6ev_AfcoJ3nw">
+        <language>java</language>
+        <body>for (int i = 0; i &lt; orders.size() - 1; i++) {
+         int minIndex = i;
+         for (int j = i + 1; j &lt; orders.size(); j++) {
+             if (orders.get(j).compareTo(orders.get(minIndex)) &lt; 0) {
+                 minIndex = j;
+             }
+         }
+         if (minIndex != i) {
+             Order temp = orders.get(i);
+             orders.set(i, orders.get(minIndex));
+             orders.set(minIndex, temp);
+         }
+     }
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_WYAcBTpAEe6ev_AfcoJ3nw" name="toString" specification="_WXp2pjpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WYAcBjpAEe6ev_AfcoJ3nw" direction="return">
+          <name xsi:nil="true"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>StringBuilder sb = new StringBuilder();
+     for (Order order : orders) {
+         sb.append(order).append(&quot;\n&quot;);
+     }
+     sb.append(&quot;Total Monthly Sale: &quot;).append(totalMonthlySale());
+     return sb.toString();
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_WXih4DpAEe6ev_AfcoJ3nw" name="BevShop" method="_WX_N0DpAEe6ev_AfcoJ3nw">
+        <eAnnotations xmi:id="_WXih4TpAEe6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_WXih4jpAEe6ev_AfcoJ3nw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_o2__cTpDEe6ev_AfcoJ3nw">
+          <body>Default constructor for initializing a `BevShop` object.
+     * Initializes instance variables and sets up the order tracking list.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_WXih4zpAEe6ev_AfcoJ3nw" type="_WXhTwDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXih5DpAEe6ev_AfcoJ3nw" name="isValidTime" method="_WX_N0jpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXih5TpAEe6ev_AfcoJ3nw" name="time">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WXjI8DpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXjI9DpAEe6ev_AfcoJ3nw" name="getMaxNumOfFruits" method="_WX_N1TpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXjI9TpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXjwAzpAEe6ev_AfcoJ3nw" name="getMinAgeForAlcohol" method="_WX_N1zpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXjwBDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXkXEjpAEe6ev_AfcoJ3nw" name="isMaxFruit" method="_WX_04DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXkXEzpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WXkXFDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXk-IjpAEe6ev_AfcoJ3nw" name="getMaxOrderForAlcohol" method="_WX_04zpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXk-IzpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXk-JzpAEe6ev_AfcoJ3nw" name="isEligibleForMore" method="_WX_05TpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXllMDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXllNDpAEe6ev_AfcoJ3nw" name="getNumOfAlcoholDrink" method="_WX_05zpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXllNTpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXmMQjpAEe6ev_AfcoJ3nw" name="isValidAge" method="_WX_06TpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXmMQzpAEe6ev_AfcoJ3nw" name="age">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WXmMRDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXmzUDpAEe6ev_AfcoJ3nw" name="findOrder" method="_WYAb9TpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXmzUTpAEe6ev_AfcoJ3nw" name="orderNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WXnaYDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXnaZDpAEe6ev_AfcoJ3nw" name="totalOrderPrice" method="_WYAb-DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXnaZTpAEe6ev_AfcoJ3nw" name="orderNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WXnaZjpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXoBczpAEe6ev_AfcoJ3nw" name="totalMonthlySale" method="_WYAb-zpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXoBdDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXoogTpAEe6ev_AfcoJ3nw" name="totalNumOfMonthlyOrders" method="_WYAb_TpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXoogjpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXoohjpAEe6ev_AfcoJ3nw" name="getCurrentOrder" method="_WYAb_zpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX6VUzpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXpPkzpAEe6ev_AfcoJ3nw" name="getOrderAtIndex" method="_WYAcATpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXpPlDpAEe6ev_AfcoJ3nw" name="index">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX6VVDpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WXp2ojpAEe6ev_AfcoJ3nw" name="sortOrders" method="_WYAcBDpAEe6ev_AfcoJ3nw"/>
+      <ownedOperation xmi:id="_WXp2pjpAEe6ev_AfcoJ3nw" name="toString" method="_WYAcBTpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WXqdsDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WX35EDpAEe6ev_AfcoJ3nw" name="startNewOrder" method="_WX_07DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX35ETpAEe6ev_AfcoJ3nw" name="time">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX35EjpAEe6ev_AfcoJ3nw" name="day" type="_KFQ38DpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_WX35EzpAEe6ev_AfcoJ3nw" name="customerName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX35FDpAEe6ev_AfcoJ3nw" name="customerAge">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WX4gIzpAEe6ev_AfcoJ3nw" name="processCoffeeOrder" method="_WX_08TpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX4gJDpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX4gJTpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_WX4gJjpAEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX4gJzpAEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WX5HMzpAEe6ev_AfcoJ3nw" name="processAlcoholOrder" method="_WX_09jpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX5uQDpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX5uQTpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_WX5uRTpAEe6ev_AfcoJ3nw" name="processSmoothieOrder" method="_WYAb8DpAEe6ev_AfcoJ3nw">
+        <ownedParameter xmi:id="_WX5uRjpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX5uRzpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_WX5uSDpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_WX5uSTpAEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_WX7jcDpAEe6ev_AfcoJ3nw" name="BevShopInterface">
+      <ownedComment xmi:id="_cAypYDpAEe6ev_AfcoJ3nw">
+        <body>Interface for an Order
+ *
+@author Greg Grinberg
+@version 8/21/2022
+ *</body>
+      </ownedComment>
+      <ownedAttribute xmi:id="_cAmcIDpAEe6ev_AfcoJ3nw" name="MIN_AGE_FOR_ALCOHOL">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cAmcITpAEe6ev_AfcoJ3nw" value="21"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAnDMTpAEe6ev_AfcoJ3nw" name="MAX_ORDER_FOR_ALCOHOL">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cAnDMjpAEe6ev_AfcoJ3nw" value="3"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAnDNDpAEe6ev_AfcoJ3nw" name="MIN_TIME">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cAnDNTpAEe6ev_AfcoJ3nw" value="8"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAnqQTpAEe6ev_AfcoJ3nw" name="MAX_TIME">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cAnqQjpAEe6ev_AfcoJ3nw" value="23"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAnqRDpAEe6ev_AfcoJ3nw" name="MAX_FRUIT">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cAnqRTpAEe6ev_AfcoJ3nw" value="5"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAoRUzpAEe6ev_AfcoJ3nw" name="maxNumOfFruits" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAoRVDpAEe6ev_AfcoJ3nw" name="minAgeForAlcohol" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAo4YzpAEe6ev_AfcoJ3nw" name="maxOrderForAlcohol" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAo4ZjpAEe6ev_AfcoJ3nw" name="numOfAlcoholDrink" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_cAqGiDpAEe6ev_AfcoJ3nw" name="currentOrder" type="_KEsQMDpAEe6ev_AfcoJ3nw" isReadOnly="true" association="_cAz3gDpAEe6ev_AfcoJ3nw"/>
+      <ownedOperation xmi:id="_cAoRUDpAEe6ev_AfcoJ3nw" name="isValidTime">
+        <ownedComment xmi:id="_cAypYTpAEe6ev_AfcoJ3nw">
+          <body>Checks if the time is valid (between 8 and 23 )
+	 *
+	 * @param time
+	 *            time represents the time
+	 * @return true if times is within the range of 8 to 23 , false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAoRUTpAEe6ev_AfcoJ3nw" name="time">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAoRUjpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAo4YDpAEe6ev_AfcoJ3nw" name="isMaxFruit">
+        <ownedComment xmi:id="_cAypYjpAEe6ev_AfcoJ3nw">
+          <body>returns true if the passed parameter exceeds the Maximum FRUIT allowed
+	 *
+	 * @param numOfFruits
+	 *            number of fruits
+	 * @return true if the passed parameter exceeds the MAXIUM number of fruits
+	 *         allowed for the SMOTHIE drink, false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAo4YTpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAo4YjpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAo4ZDpAEe6ev_AfcoJ3nw" name="isEligibleForMore">
+        <ownedComment xmi:id="_cAypYzpAEe6ev_AfcoJ3nw">
+          <body>checks if the number of alcohol beverages for the current order has
+	 * reached the maximum
+	 *
+	 * @return true if number of alcohol drinks for the current order has
+	 *         reached the maximum , false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAo4ZTpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAo4ZzpAEe6ev_AfcoJ3nw" name="isValidAge">
+        <ownedComment xmi:id="_cAypZDpAEe6ev_AfcoJ3nw">
+          <body>check the valid age for the alcohol drink
+	 *
+	 * @param age
+	 *            the age
+	 * @return returns true if age is more than minimum eligible age , false
+	 *         otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAo4aDpAEe6ev_AfcoJ3nw" name="age">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cApfcDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cApfcTpAEe6ev_AfcoJ3nw" name="findOrder">
+        <ownedComment xmi:id="_cAypaTpAEe6ev_AfcoJ3nw">
+          <body>locate an order based on the order number
+	 *
+	 * @param orderNo
+	 *            the order number
+	 * @return the index of the order in the list of Orders if found or -1 if
+	 *         not found</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cApfcjpAEe6ev_AfcoJ3nw" name="orderNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAqGgDpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAqGgTpAEe6ev_AfcoJ3nw" name="totalOrderPrice">
+        <ownedComment xmi:id="_cAypajpAEe6ev_AfcoJ3nw">
+          <body>locates an order in the list of orders and returns the total value on the
+	 * order.
+	 *
+	 * @param orderNo
+	 *            the order number
+	 * @returns the calculated price on this order.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAqGgjpAEe6ev_AfcoJ3nw" name="orderNo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAqGgzpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAqGhDpAEe6ev_AfcoJ3nw" name="totalMonthlySale">
+        <ownedComment xmi:id="_cAzQcDpAEe6ev_AfcoJ3nw">
+          <body>Calculates the total sale of all the orders for this beverage shop
+	 *
+	 * @return the total sale of all the orders</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAqGhTpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAqGhjpAEe6ev_AfcoJ3nw" name="totalNumOfMonthlyOrders">
+        <ownedComment xmi:id="_cAzQcTpAEe6ev_AfcoJ3nw">
+          <body>returns total numbers of orders within the month
+	 *
+	 * @returns total numbers of orders within the month</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAqGhzpAEe6ev_AfcoJ3nw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAqtkDpAEe6ev_AfcoJ3nw" name="getOrderAtIndex">
+        <ownedComment xmi:id="_cAzQcjpAEe6ev_AfcoJ3nw">
+          <body>returns Order in the list of orders at the index Notes: this method
+	 * returns the shallow copy of the order
+	 *
+	 * @return Order in the list of orders at the index</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAqtkTpAEe6ev_AfcoJ3nw" name="index">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAyCVTpAEe6ev_AfcoJ3nw" type="_KEsQMDpAEe6ev_AfcoJ3nw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAqtkjpAEe6ev_AfcoJ3nw" name="sortOrders">
+        <ownedComment xmi:id="_cAzQczpAEe6ev_AfcoJ3nw">
+          <body>sorts the orders within this bevShop using the Selection sort algorithm</body>
+        </ownedComment>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAw0MDpAEe6ev_AfcoJ3nw" name="startNewOrder">
+        <ownedComment xmi:id="_cAypZTpAEe6ev_AfcoJ3nw">
+          <body>Creates a new order , NO BEVERAGE is added to the order yet
+	 *
+	 * @param time
+	 *            time of the order
+	 * @param day
+	 *            day of the order of type DAY
+	 * @param customerName
+	 *            customer name
+	 * @param customerAge
+	 *            customer age</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAw0MTpAEe6ev_AfcoJ3nw" name="time">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAxbQDpAEe6ev_AfcoJ3nw" name="day" type="_KFQ38DpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_cAxbQTpAEe6ev_AfcoJ3nw" name="customerName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAxbQjpAEe6ev_AfcoJ3nw" name="customerAge">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAxbQzpAEe6ev_AfcoJ3nw" name="processCoffeeOrder">
+        <ownedComment xmi:id="_cAypZjpAEe6ev_AfcoJ3nw">
+          <body>process the Coffee order for the current order by adding it to the
+	 * current order
+	 *
+	 * @param bevName
+	 *            beverage name
+	 * @param size
+	 *            beverage size
+	 * @param extraShot
+	 *            true if the coffee beverage has extra shot , false otherwise
+	 * @param extraSyrup
+	 *            true if the coffee beverage has extra syrup , false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAxbRDpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAxbRTpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_cAxbRjpAEe6ev_AfcoJ3nw" name="extraShot">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAxbRzpAEe6ev_AfcoJ3nw" name="extraSyrup">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAxbSDpAEe6ev_AfcoJ3nw" name="processAlcoholOrder">
+        <ownedComment xmi:id="_cAypZzpAEe6ev_AfcoJ3nw">
+          <body>process the Alcohol order for the current order by adding it to the
+	 * current order
+	 *
+	 * @param bevName
+	 *            beverage name
+	 * @param size
+	 *            beverage size</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAxbSTpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAxbSjpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cAyCUDpAEe6ev_AfcoJ3nw" name="processSmoothieOrder">
+        <ownedComment xmi:id="_cAypaDpAEe6ev_AfcoJ3nw">
+          <body>process the Smoothie order for the current order by adding it to the
+	 * current order
+	 *
+	 * @param bevName
+	 *            beverage name
+	 * @param size
+	 *            beverage size
+	 * @param numOfFruits
+	 *            number of fruits to be added
+	 * @param addProtein
+	 *            true if protein is added , false otherwise</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_cAyCUTpAEe6ev_AfcoJ3nw" name="bevName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAyCUjpAEe6ev_AfcoJ3nw" name="size" type="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+        <ownedParameter xmi:id="_cAyCUzpAEe6ev_AfcoJ3nw" name="numOfFruits">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_cAyCVDpAEe6ev_AfcoJ3nw" name="addProtein">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WYCRIDpAEe6ev_AfcoJ3nw" name="" memberEnd="_WYCRITpAEe6ev_AfcoJ3nw _WX9YojpAEe6ev_AfcoJ3nw">
+      <ownedEnd xmi:id="_WYCRITpAEe6ev_AfcoJ3nw" name="" type="_WXhTwDpAEe6ev_AfcoJ3nw" association="_WYCRIDpAEe6ev_AfcoJ3nw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cAz3gDpAEe6ev_AfcoJ3nw" name="" memberEnd="_cAz3gTpAEe6ev_AfcoJ3nw _cAqGiDpAEe6ev_AfcoJ3nw">
+      <ownedEnd xmi:id="_cAz3gTpAEe6ev_AfcoJ3nw" name="" type="_WX7jcDpAEe6ev_AfcoJ3nw" association="_cAz3gDpAEe6ev_AfcoJ3nw"/>
+    </packagedElement>
+    <profileApplication xmi:id="_DavWIDo_Ee6ev_AfcoJ3nw">
+      <eAnnotations xmi:id="_DayZcDo_Ee6ev_AfcoJ3nw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_Da2D0Do_Ee6ev_AfcoJ3nw" base_Package="_DLA4EDo_Ee6ev_AfcoJ3nw">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_D5V9sDo_Ee6ev_AfcoJ3nw" base_Element="_D5VWoTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_D5WkwDo_Ee6ev_AfcoJ3nw" base_Element="_D5VWoTo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_D5WkwTo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_D53iIDo_Ee6ev_AfcoJ3nw" base_Element="_D527EDo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_D54JMTo_Ee6ev_AfcoJ3nw" base_Element="_D53iITo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_D54wQDo_Ee6ev_AfcoJ3nw" base_Element="_D53iITo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_D54wQTo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_D56lcTo_Ee6ev_AfcoJ3nw" base_Element="_D56lcDo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_D57zkDo_Ee6ev_AfcoJ3nw" base_Element="_D56lcjo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_D58aoDo_Ee6ev_AfcoJ3nw" base_Element="_D57zkTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_SmMzsDo_Ee6ev_AfcoJ3nw" base_Element="_SmK-gDo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_SmMzsTo_Ee6ev_AfcoJ3nw" base_Element="_SmK-gDo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_SmNawDo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_SmOB0To_Ee6ev_AfcoJ3nw" base_Element="_SmNawTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_SmOo4Do_Ee6ev_AfcoJ3nw" base_Element="_SmNawTo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_SmOo4To_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Sml1QTo_Ee6ev_AfcoJ3nw" base_Element="_SmlOMTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_Sml1Qjo_Ee6ev_AfcoJ3nw" base_Element="_SmlOMTo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_SmmcUDo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_SmnDYDo_Ee6ev_AfcoJ3nw" base_Element="_SmmcUjo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_XiMMkDo_Ee6ev_AfcoJ3nw" base_Element="_XiLlgDo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_XiMMkTo_Ee6ev_AfcoJ3nw" base_Element="_XiLlgDo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_XiMzoDo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_XiNasDo_Ee6ev_AfcoJ3nw" base_Element="_XiMzoTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_XiNasTo_Ee6ev_AfcoJ3nw" base_Element="_XiMzoTo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_XiNasjo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_XiYZ0zo_Ee6ev_AfcoJ3nw" base_Element="_XiYZ0Do_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_XiZA4Do_Ee6ev_AfcoJ3nw" base_Element="_XiYZ0Do_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_XiZA4To_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_XiaPADo_Ee6ev_AfcoJ3nw" base_Element="_XiZn8Do_Ee6ev_AfcoJ3nw">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_Xia2EDo_Ee6ev_AfcoJ3nw" name="getExtraShot" method="_XidSUDo_Ee6ev_AfcoJ3nw">
+      <ownedParameter xmi:id="_XibdIDo_Ee6ev_AfcoJ3nw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_XicEMDo_Ee6ev_AfcoJ3nw" base_Element="_XibdITo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_XicrQDo_Ee6ev_AfcoJ3nw" base_Element="_XicEMTo_Ee6ev_AfcoJ3nw"/>
+  <uml:OpaqueBehavior xmi:id="_XidSUDo_Ee6ev_AfcoJ3nw" name="getExtraShot" specification="_Xia2EDo_Ee6ev_AfcoJ3nw">
+    <ownedParameter xmi:id="_XidSUTo_Ee6ev_AfcoJ3nw" direction="return">
+      <name xsi:nil="true"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return extraShot;
+ </body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_abvMkjo_Ee6ev_AfcoJ3nw" base_Element="_abvMkDo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_abvMkzo_Ee6ev_AfcoJ3nw" base_Element="_abvMkDo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_abvzoDo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_abvzozo_Ee6ev_AfcoJ3nw" base_Element="_abvzoTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_abvzpDo_Ee6ev_AfcoJ3nw" base_Element="_abvzoTo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_abwasDo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_ab49ljo_Ee6ev_AfcoJ3nw" base_Element="_ab49kzo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_ab5koDo_Ee6ev_AfcoJ3nw" base_Element="_ab49kzo_Ee6ev_AfcoJ3nw">
+    <annotations xmi:id="_ab5koTo_Ee6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_ab6ywDo_Ee6ev_AfcoJ3nw" base_Element="_ab6LsTo_Ee6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_BUJAkDpAEe6ev_AfcoJ3nw" base_Element="_BUIZgDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_Fy65ATpAEe6ev_AfcoJ3nw" base_Element="_Fy6R8DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_Fy7gEDpAEe6ev_AfcoJ3nw" base_Element="_Fy6R8DpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_Fy7gETpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KEwhoDpAEe6ev_AfcoJ3nw" base_Element="_KEv6kTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_KEwhoTpAEe6ev_AfcoJ3nw" base_Element="_KEv6kTpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_KEwhojpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_KFFRwDpAEe6ev_AfcoJ3nw" base_Element="_KFEqsDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_KFFRwjpAEe6ev_AfcoJ3nw" base_Element="_KFFRwTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KFGf4zpAEe6ev_AfcoJ3nw" base_Element="_KFGf4DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_KFHG8DpAEe6ev_AfcoJ3nw" base_Element="_KFGf4DpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_KFHG8TpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_KFQQ4DpAEe6ev_AfcoJ3nw" base_Element="_KFPp0DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Generics xmi:id="_KFQQ4jpAEe6ev_AfcoJ3nw" genericsValue="Order" base_Element="_KFQQ4TpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_KFQ38TpAEe6ev_AfcoJ3nw" base_Element="_KFQ38DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_KFSGETpAEe6ev_AfcoJ3nw" base_Element="_KFSGEDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_KFT7QDpAEe6ev_AfcoJ3nw" base_Element="_KFTUNTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KFVJYDpAEe6ev_AfcoJ3nw" base_Element="_KFUiUTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KFVJYzpAEe6ev_AfcoJ3nw" base_Element="_KFVJYjpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_KFVwcTpAEe6ev_AfcoJ3nw" base_Element="_KFVJZDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_KFZa0jpAEe6ev_AfcoJ3nw" base_Element="_KFZa0DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_KFaB4DpAEe6ev_AfcoJ3nw" base_Element="_KFZa0zpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXjI8TpAEe6ev_AfcoJ3nw" base_Element="_WXih5DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXjI8jpAEe6ev_AfcoJ3nw" base_Element="_WXih5DpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXjI8zpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXjwADpAEe6ev_AfcoJ3nw" base_Element="_WXjI9DpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXjwATpAEe6ev_AfcoJ3nw" base_Element="_WXjI9DpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXjwAjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXjwBTpAEe6ev_AfcoJ3nw" base_Element="_WXjwAzpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXkXEDpAEe6ev_AfcoJ3nw" base_Element="_WXjwAzpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXkXETpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXkXFTpAEe6ev_AfcoJ3nw" base_Element="_WXkXEjpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXk-IDpAEe6ev_AfcoJ3nw" base_Element="_WXkXEjpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXk-ITpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXk-JDpAEe6ev_AfcoJ3nw" base_Element="_WXk-IjpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXk-JTpAEe6ev_AfcoJ3nw" base_Element="_WXk-IjpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXk-JjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXllMTpAEe6ev_AfcoJ3nw" base_Element="_WXk-JzpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXllMjpAEe6ev_AfcoJ3nw" base_Element="_WXk-JzpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXllMzpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXllNjpAEe6ev_AfcoJ3nw" base_Element="_WXllNDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXmMQDpAEe6ev_AfcoJ3nw" base_Element="_WXllNDpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXmMQTpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXmMRTpAEe6ev_AfcoJ3nw" base_Element="_WXmMQjpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXmMRjpAEe6ev_AfcoJ3nw" base_Element="_WXmMQjpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXmMRzpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXnaYTpAEe6ev_AfcoJ3nw" base_Element="_WXmzUDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXnaYjpAEe6ev_AfcoJ3nw" base_Element="_WXmzUDpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXnaYzpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXoBcDpAEe6ev_AfcoJ3nw" base_Element="_WXnaZDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXoBcTpAEe6ev_AfcoJ3nw" base_Element="_WXnaZDpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXoBcjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXoBdTpAEe6ev_AfcoJ3nw" base_Element="_WXoBczpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXoBdjpAEe6ev_AfcoJ3nw" base_Element="_WXoBczpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXoogDpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXoogzpAEe6ev_AfcoJ3nw" base_Element="_WXoogTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXoohDpAEe6ev_AfcoJ3nw" base_Element="_WXoogTpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXoohTpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXpPkDpAEe6ev_AfcoJ3nw" base_Element="_WXoohjpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXpPkTpAEe6ev_AfcoJ3nw" base_Element="_WXoohjpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXpPkjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXpPlTpAEe6ev_AfcoJ3nw" base_Element="_WXpPkzpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXp2oDpAEe6ev_AfcoJ3nw" base_Element="_WXpPkzpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXp2oTpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXp2ozpAEe6ev_AfcoJ3nw" base_Element="_WXp2ojpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXp2pDpAEe6ev_AfcoJ3nw" base_Element="_WXp2ojpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXp2pTpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WXqdsTpAEe6ev_AfcoJ3nw" base_Element="_WXp2pjpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WXqdsjpAEe6ev_AfcoJ3nw" base_Element="_WXp2pjpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WXqdszpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WX4gIDpAEe6ev_AfcoJ3nw" base_Element="_WX35EDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WX4gITpAEe6ev_AfcoJ3nw" base_Element="_WX35EDpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WX4gIjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WX5HMDpAEe6ev_AfcoJ3nw" base_Element="_WX4gIzpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WX5HMTpAEe6ev_AfcoJ3nw" base_Element="_WX4gIzpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WX5HMjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WX5uQjpAEe6ev_AfcoJ3nw" base_Element="_WX5HMzpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WX5uQzpAEe6ev_AfcoJ3nw" base_Element="_WX5HMzpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WX5uRDpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WX6VUDpAEe6ev_AfcoJ3nw" base_Element="_WX5uRTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Annotations xmi:id="_WX6VUTpAEe6ev_AfcoJ3nw" base_Element="_WX5uRTpAEe6ev_AfcoJ3nw">
+    <annotations xmi:id="_WX6VUjpAEe6ev_AfcoJ3nw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WX9YoTpAEe6ev_AfcoJ3nw" base_Element="_WX9YoDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_WX9YpDpAEe6ev_AfcoJ3nw" base_Element="_WX9YojpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_WYC4MDpAEe6ev_AfcoJ3nw" base_Element="_WYCRIDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cAnDMDpAEe6ev_AfcoJ3nw" base_Element="_cAmcIDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cAnDMzpAEe6ev_AfcoJ3nw" base_Element="_cAnDMTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cAnqQDpAEe6ev_AfcoJ3nw" base_Element="_cAnDNDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cAnqQzpAEe6ev_AfcoJ3nw" base_Element="_cAnqQTpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_cAnqRjpAEe6ev_AfcoJ3nw" base_Element="_cAnqRDpAEe6ev_AfcoJ3nw"/>
+  <UMLLabProfile:Reference xmi:id="_cAz3gjpAEe6ev_AfcoJ3nw" base_Element="_cAz3gDpAEe6ev_AfcoJ3nw"/>
+</xmi:XMI>
